@@ -1,0 +1,36 @@
+{
+  "name": "npm-project",
+  "version": "1.0.0",
+  "description": "Boilerplate for npm modules",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js ",
+    "test": "NODE_ENV=test mocha --globals use,map --reporter spec --bail --check-leaks --no-deprecation  test/",
+    "test:cover": "NODE_ENV=test nyc --reporter=html npm run test",
+    "coverage": "NODE_ENV=test nyc report --reporter=text-lcov | coveralls | rm -rf ./coverage",
+    "lint": "eslint src test",
+    "build": "rm -rf lib/ && babel src --out-dir lib"
+  },
+  "repository": "git+https://github.com/hacktivistic/npm-project.git",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "author": "Robin Panta <hacktivistic@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hacktivistic/npm-project/issues"
+  },
+  "homepage": "https://github.com/hacktivistic/npm-project#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-minify": "^0.5.0",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.12.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0"
+  }
+}
