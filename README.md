@@ -1,4 +1,4 @@
-# NPM Project 🔥
+# NPM Project Boilerplate 🔥
 > Pre-configured boilerplate for starting an npm module
 
 ##### Start developing your module in seconds!
